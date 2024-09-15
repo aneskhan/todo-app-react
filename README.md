@@ -1,3 +1,3 @@
 Todo app on React JS
 
-![alt text]([http://url/to/img.png](https://prnt.sc/oiQTatHm6OdX))
+<img src="https://prnt.sc/oiQTatHm6OdX" width="128"/>
