@@ -1,3 +1,3 @@
 Todo app on React JS
 
-<img src="https://prnt.sc/oiQTatHm6OdX" />
+<img src="https://snipboard.io/TW2Lw6.jpg" height="200px"/>
