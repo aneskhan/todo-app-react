@@ -1,12 +1,17 @@
-import React from 'react'
-import Todo from './components/Todo'
+import { ThemeProvider } from 'next-themes'
+import { TooltipProvider } from '@/components/ui/tooltip'
+import { Toaster } from '@/components/ui/sonner'
+import { TodoApp } from '@/components/TodoApp'
 
-const App = () => {
+export default function App() {
   return (
-    <div className='bg-stone-900 grid py-4 min-h-screen'>
-      <Todo />
-    </div>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+      <TooltipProvider delayDuration={400}>
+        <main className="flex min-h-dvh flex-col items-center justify-center gap-4 px-4 py-10">
+          <TodoApp />
+        </main>
+        <Toaster position="bottom-center" />
+      </TooltipProvider>
+    </ThemeProvider>
   )
 }
-
-export default App

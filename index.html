@@ -1,12 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru" class="h-full">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ToDo</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Минималистичный список задач: фильтры, прогресс, тёмная тема и офлайн-хранение." />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+    <title>ToDo — список задач</title>
+    <script>
+      // Ставим тему до первой отрисовки: next-themes применит её только после гидрации.
+      try {
+        const theme = localStorage.getItem('theme') ?? 'system'
+        const dark =
+          theme === 'dark' ||
+          (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        document.documentElement.classList.add(dark ? 'dark' : 'light')
+      } catch {}
+    </script>
   </head>
-  <body>
+  <body class="h-full">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
